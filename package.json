@@ -1,7 +1,7 @@
 {
   "name": "nodejs_selenium",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simples projeto para exemplificar como utilizar Selenium webdriver em Nodejs.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,6 +13,14 @@
     "selenium-webdriver": "^4.0.0"
   },
   "devDependencies": {
-    "chromedriver": "^94.0.0"
-  }
+    "chromedriver": "^110.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Caiozed/nodejs-selenium-yt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Caiozed/nodejs-selenium-yt/issues"
+  },
+  "homepage": "https://github.com/Caiozed/nodejs-selenium-yt#readme"
 }

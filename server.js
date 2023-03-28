@@ -1,15 +1,21 @@
-const {Builder, By, Key} = require('selenium-webdriver');
-const chrome = require('selenium-webdriver/chrome');
-const chromedriver = require('chromedriver');
+const { Builder, By, Key } = require('selenium-webdriver');
 
-chrome.setDefaultService(new chrome.ServiceBuilder(chromedriver.path).build());
+//chrome.setDefaultService(new chrome.ServiceBuilder(chromedriver.path).build());
 
 async function run() {
-    let driver = await new Builder().forBrowser('chrome').build();
-    await driver.get('https://google.com');
-    const searchBar = await driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input"));
-    await searchBar.sendKeys("nodejs");
-    await searchBar.sendKeys(Key.ENTER);
+    let driver = await new Builder().forBrowser('chrome').build()
+    
+    await driver.get('https://www.oabsp.org.br/');
+    const consulta = await driver.findElement(By.linkText('Consultar Intimações')).click()
+    await driver.findElement(By.id("ctl00_ContentPlaceHolder1_ctrLogin_UserName"))
+    .sendKeys('tnovmaente')
+    
+   // const searchBar = await driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/img"));
+    //await searchBar.sendKeys("nodejs");
+    //await searchBar.sendKeys(Key.ENTER);
+    
+    //console.log(x)
 }
+
 
 run();
